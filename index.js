@@ -5,6 +5,13 @@ const express = require("express");
 const app = express();
 const connectDB = require("./db/connect");
 
+
+
+const blogs = require('./routes/blog')
+
+app.use('/api/v1/blogs' , blogs)
+
+
 const port = process.env.PORT || 5000;
 
 const start = async () => {
